@@ -17,9 +17,6 @@ $('.reviews__slider').slick({
 	arrows: true,
 	infinite: true,
 	speed: 500,
-	//variableWidth: true,
-	//centerMode: true,
-	//centerPadding: '10px',
 	slidesToShow: 3,
 	slidesToScroll: 1,
 	autoplay: true,
@@ -156,23 +153,27 @@ $(function () {
 	});
 });
 
-/*===================Preloader=========================*/
 function loadData() {
 	return new Promise((resolve, reject) => {
 		setTimeout(resolve, 1000);
 	});
 }
+/*===================Preloader=========================*/
 loadData().then(() => {
 	let preloaderEl = document.getElementById('preloader');
 	preloaderEl.classList.add('hidden');
 	preloaderEl.classList.remove('visible');
+});
+/*=========================Animation====================================*/
+loadData().then(() => {
+	animOnScroll();
+	window.addEventListener('scroll', animOnScroll);
 });
 
 /*=========================Animation====================================*/
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
-	window.addEventListener('scroll', animOnScroll);
 	function animOnScroll() {
 		for (let index = 0; index < animItems.length; index++) {
 			const animItem = animItems[index];
@@ -200,8 +201,4 @@ if (animItems.length > 0) {
 			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 	}
-
-	setTimeout(() => {
-		animOnScroll();
-	}, 1500);
 }
