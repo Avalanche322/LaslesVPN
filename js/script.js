@@ -4,6 +4,9 @@ window.addEventListener('scroll', function () {
 	header.classList.toggle('sticky', window.scrollY > 0);
 });
 
+/*=======================Refresch page when change width or height=============================*/
+$(window).on('resize',function(){location.reload();});
+
 /*=======================Menu for mobile=============================*/
 $(document).ready(function () {
 	$('.header__burger').click(function (event) {
