@@ -61,6 +61,9 @@ h1,h2,h3,h4,h5,h6{color: $text-bold;}
 	"main"
 	"footer";
 }
+.lock{
+	overflow: hidden;
+}
 .logo{
 		//grid-column: 2 / 3;
 		font-weight: 500;
@@ -252,7 +255,6 @@ h1,h2,h3,h4,h5,h6{color: $text-bold;}
   	justify-content: center;
   	position: fixed;
   	z-index: 100;
-  	overflow: visible;
 }
 .visible {
   visibility: visible;

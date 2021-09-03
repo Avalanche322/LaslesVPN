@@ -101,6 +101,10 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-areas: "header" "main" "footer";
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .logo {
   font-weight: 500;
   font-size: 20px;
@@ -299,7 +303,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   position: fixed;
   z-index: 100;
-  overflow: visible;
 }
 
 .visible {

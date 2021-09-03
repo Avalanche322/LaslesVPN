@@ -164,8 +164,10 @@ function loadData() {
 /*===================Preloader=========================*/
 loadData().then(() => {
 	let preloaderEl = document.getElementById('preloader');
+	const bodyLock = document.querySelector('body');
 	preloaderEl.classList.add('hidden');
 	preloaderEl.classList.remove('visible');
+	bodyLock.classList.remove('lock');
 });
 /*=========================Animation====================================*/
 loadData().then(() => {
