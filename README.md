@@ -22,4 +22,20 @@ Clone repository
 
 or download
 
-Open the folder in the IDE and edit as you need
+Open folder
+
+`cd LaslesVPN`
+
+Install node modules:
+
+`npm install`
+
+To Start Server:
+
+`npm i live-server`
+
+`live-server`  
+
+To Visit App:
+
+`http://127.0.0.1:8080` 
